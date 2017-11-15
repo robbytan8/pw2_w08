@@ -1,0 +1,147 @@
+/*
+    Created on : Aug 1, 2017, 10:29:39 AM
+    Author     : Robby
+*/
+body {
+    width: 85%;
+    margin: 0 auto;
+}
+
+header h1 {
+    text-align: center;
+}
+
+main {
+    padding: 5px;
+    background: #22cccc;
+}
+
+footer {
+    padding: 2px;
+    font-size: small;
+    text-align: right;
+}
+
+form label {
+    display: inline-block;
+    text-align: right;
+    width: 100px;
+    margin-right: 10px;
+    font-family: Calibri, sans-serif;
+}
+
+form input[type=text], input[type=password], input[type=email] {
+    display: inline-block;
+    font-family: Calibri;
+    padding: 8px;
+    width: 250px;
+}
+
+select {
+    padding: 8px;
+}
+
+table thead {
+    background-color: #111;
+    color: white;
+}
+
+nav ul li a:hover {
+    background-color: #111;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+nav ul li a:hover {
+    background-color: #111;
+}
+
+.err_message {
+    background-color: #cc5555;
+    font-style: italic;
+}
+
+.button {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.button:focus,
+.button:active:focus,
+.button.active:focus,
+.button.focus,
+.button:active.focus,
+.button.active.focus {
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+
+.button:hover,
+.button:focus,
+.button.focus {
+    color: #333;
+    text-decoration: none;
+}
+
+.button-primary {
+    color: white;
+    background-color: #4655BC;
+}
+
+.button-success {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+
+.button-info {
+    color: #fff;
+    background-color: #5bc0de;
+    border-color: #46b8da;
+}
+
+.table_news {
+    border: 1px black solid;
+    width: 100%;
+}
+
+.table_news td {
+    border: 1px black solid;
+}
+
+.table_news tr:nth-of-type(even) {
+    background-color: #88AACC;
+}
