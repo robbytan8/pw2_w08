@@ -18,6 +18,25 @@ class BookDaoImpl {
 
     public function addNewBook(Book $book) {
         $link = PDOUtil::createPDOConnection();
+        $query = "INSERT INTO book(isbn, title, author, publisher, publish_year, category_id) VALUES(?,?,?,?,?,?)";
+        $stmt = $link->prepare($query);
+        $stmt->bindValue(1, $book->getIsbn(), PDO::PARAM_STR);
+        $stmt->bindValue(2, $book->getTitle(), PDO::PARAM_STR);
+        $stmt->bindValue(3, $book->getAuthor(), PDO::PARAM_STR);
+        $stmt->bindValue(4, $book->getPublisher(), PDO::PARAM_STR);
+        $stmt->bindValue(5, $book->getPublish_year(), PDO::PARAM_STR);
+        $stmt->bindValue(6, $book->getCategory()->getId(), PDO::PARAM_INT);
+        $link->beginTransaction();
+        if ($stmt->execute()) {
+            $link->commit();
+        } else {
+            $link->rollBack();
+        }
+        PDOUtil::closePDOConnection($link);
+    }
+
+    public function addNewBookWithCover(Book $book) {
+        $link = PDOUtil::createPDOConnection();
         $query = "INSERT INTO book(isbn, title, author, publisher, publish_year, cover, category_id) VALUES(?,?,?,?,?,?,?)";
         $stmt = $link->prepare($query);
         $stmt->bindValue(1, $book->getIsbn(), PDO::PARAM_STR);
